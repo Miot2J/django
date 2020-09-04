@@ -529,18 +529,32 @@ input[type="radio"]:focus + label:before {
                 0%{transform:rotate(0deg);}
                 100%{transform:rotate(360deg);}
             }
+            #dis{
+      width:480px;;
+      height:400px;
+      left:28%;
+      top:15%;
+      position:fixed;
+      background-color: #000;
+    }
   </style>
   </head>
 <body>
+  <img id="dis" src="{% static 'admin/img/pen.gif' %}" alt=""> 
   <script>
+  
   function toggleText() {
   var text = document.getElementById("demo");
+  
   if (text.style.display === "none") {
     text.style.display = "block";
+    
   } else {
-    text.style.display = "none";
+    text.style.display = "none"
+    text.style.backgroundColor="#00000";
   }
-}
+  
+};
 </script>
     <section id="demo" style="position:relative;">
     <img class="pic" src="{% static 'admin/img/picture.png' %}" alt="" />
